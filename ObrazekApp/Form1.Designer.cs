@@ -17,49 +17,50 @@
 
         private void InitializeComponent()
         {
-            this.buttonLoad = new System.Windows.Forms.Button();
-            this.pictureBoxImage = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
-            this.SuspendLayout();
+            buttonLoad = new Button();
+            pictureBoxImage = new PictureBox();
+            buttonGreen = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxImage).BeginInit();
+            SuspendLayout();
 
-            // 
             // buttonLoad
-            // 
-            this.buttonLoad.Location = new System.Drawing.Point(12, 333);
-            this.buttonLoad.Name = "buttonLoad";
-            this.buttonLoad.Size = new System.Drawing.Size(94, 29);
-            this.buttonLoad.TabIndex = 0;
-            this.buttonLoad.Text = "Load";
-            this.buttonLoad.UseVisualStyleBackColor = true;
+            buttonLoad.Location = new Point(12, 333);
+            buttonLoad.Name = "buttonLoad";
+            buttonLoad.Size = new Size(94, 29);
+            buttonLoad.Text = "Load";
+            buttonLoad.UseVisualStyleBackColor = true;
 
-            // 
             // pictureBoxImage
-            // 
-            this.pictureBoxImage.Location = new System.Drawing.Point(112, 12);
-            this.pictureBoxImage.Name = "pictureBoxImage";
-            this.pictureBoxImage.Size = new System.Drawing.Size(259, 350);
-            this.pictureBoxImage.TabIndex = 1;
-            this.pictureBoxImage.TabStop = false;
-            this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBoxImage.Location = new Point(112, 12);
+            pictureBoxImage.Name = "pictureBoxImage";
+            pictureBoxImage.Size = new Size(259, 350);
+            pictureBoxImage.SizeMode = PictureBoxSizeMode.Zoom;
 
-            // 
+            // buttonGreen
+            buttonGreen.Location = new Point(12, 298);
+            buttonGreen.Name = "buttonGreen";
+            buttonGreen.Size = new Size(94, 29);
+            buttonGreen.Text = "Only Green";
+            buttonGreen.UseVisualStyleBackColor = true;
+
             // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 374);
-            this.Controls.Add(this.pictureBoxImage);
-            this.Controls.Add(this.buttonLoad);
-            this.Name = "Form1";
-            this.Text = "Image App";
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(401, 374);
+            Controls.Add(buttonGreen);
+            Controls.Add(pictureBoxImage);
+            Controls.Add(buttonLoad);
+            Name = "Form1";
+            Text = "Image App";
 
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
-            this.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxImage).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
 
-        private System.Windows.Forms.Button buttonLoad;
-        private System.Windows.Forms.PictureBox pictureBoxImage;
+        private Button buttonLoad;
+        private PictureBox pictureBoxImage;
+        private Button buttonGreen;
     }
 }
