@@ -15,7 +15,9 @@ namespace ObrazekApp
             pictureBoxImage.SizeMode = PictureBoxSizeMode.Zoom;
 
             buttonLoad.Click += buttonLoad_Click;
-            buttonRotate.Click += buttonRotate_Click; // <-- DODANE
+            buttonRotate.Click += buttonRotate_Click;
+            buttonInvert.Click += buttonInvert_Click;
+            buttonFlip.Click += buttonFlip_Click;
         }
 
         private void buttonLoad_Click(object? sender, EventArgs e)
@@ -56,6 +58,53 @@ namespace ObrazekApp
             }
 
             currentImage = rotated;
+            pictureBoxImage.Image = currentImage;
+        }
+
+        
+        private void buttonInvert_Click(object? sender, EventArgs e)
+        {
+            if (currentImage == null) return;
+
+            Bitmap result = new Bitmap(currentImage);
+
+            for (int y = 0; y < result.Height; y++)
+            {
+                for (int x = 0; x < result.Width; x++)
+                {
+                    Color px = result.GetPixel(x, y);
+
+                    result.SetPixel(x, y, Color.FromArgb(
+                        px.A,
+                        255 - px.R,
+                        255 - px.G,
+                        255 - px.B
+                    ));
+                }
+            }
+
+            currentImage = result;
+            pictureBoxImage.Image = currentImage;
+        }
+
+     
+        private void buttonFlip_Click(object? sender, EventArgs e)
+        {
+            if (currentImage == null) return;
+
+            Bitmap result = new Bitmap(currentImage.Width, currentImage.Height);
+
+            for (int y = 0; y < currentImage.Height; y++)
+            {
+                for (int x = 0; x < currentImage.Width; x++)
+                {
+                    Color px = currentImage.GetPixel(x, y);
+
+                    result.SetPixel(x, currentImage.Height - 1 - y, px);
+                }
+            }
+
+            currentImage = result;
             pictureBoxImage.Image = currentImage;
         }
     }

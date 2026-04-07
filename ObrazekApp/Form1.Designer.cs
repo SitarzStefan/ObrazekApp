@@ -23,6 +23,8 @@
             radio180 = new RadioButton();
             radio270 = new RadioButton();
             buttonRotate = new Button();
+            buttonInvert = new Button();
+            buttonFlip = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxImage).BeginInit();
             SuspendLayout();
             // 
@@ -86,11 +88,31 @@
             buttonRotate.Text = "Rotate";
             buttonRotate.UseVisualStyleBackColor = true;
             // 
+            // buttonInvert
+            // 
+            buttonInvert.Location = new Point(12, 137);
+            buttonInvert.Name = "buttonInvert";
+            buttonInvert.Size = new Size(94, 48);
+            buttonInvert.TabIndex = 6;
+            buttonInvert.Text = "Invert Colors";
+            buttonInvert.UseVisualStyleBackColor = true;
+            // 
+            // buttonFlip
+            // 
+            buttonFlip.Location = new Point(12, 191);
+            buttonFlip.Name = "buttonFlip";
+            buttonFlip.Size = new Size(94, 49);
+            buttonFlip.TabIndex = 7;
+            buttonFlip.Text = "Upside Down";
+            buttonFlip.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(401, 374);
+            Controls.Add(buttonFlip);
+            Controls.Add(buttonInvert);
             Controls.Add(buttonRotate);
             Controls.Add(radio270);
             Controls.Add(radio180);
@@ -112,5 +134,7 @@
         private RadioButton radio180;
         private RadioButton radio270;
         private Button buttonRotate;
+        private Button buttonInvert;
+        private Button buttonFlip;
     }
 }
