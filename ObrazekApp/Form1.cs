@@ -18,6 +18,7 @@ namespace ObrazekApp
             buttonRotate.Click += buttonRotate_Click;
             buttonInvert.Click += buttonInvert_Click;
             buttonFlip.Click += buttonFlip_Click;
+            buttonGreen.Click += buttonGreen_Click;
         }
 
         private void buttonLoad_Click(object? sender, EventArgs e)
@@ -47,7 +48,13 @@ namespace ObrazekApp
             else
                 return;
 
-            Bitmap rotated = new Bitmap(currentImage.Width, currentImage.Height);
+            Bitmap rotated;
+
+            // ?? POPRAWKA: 90/270 zamieniaj¹ wymiary
+            if (angle == 90 || angle == 270)
+                rotated = new Bitmap(currentImage.Height, currentImage.Width);
+            else
+                rotated = new Bitmap(currentImage.Width, currentImage.Height);
 
             using (Graphics g = Graphics.FromImage(rotated))
             {
@@ -61,7 +68,6 @@ namespace ObrazekApp
             pictureBoxImage.Image = currentImage;
         }
 
-        
         private void buttonInvert_Click(object? sender, EventArgs e)
         {
             if (currentImage == null) return;
@@ -87,7 +93,6 @@ namespace ObrazekApp
             pictureBoxImage.Image = currentImage;
         }
 
-     
         private void buttonFlip_Click(object? sender, EventArgs e)
         {
             if (currentImage == null) return;
@@ -101,6 +106,34 @@ namespace ObrazekApp
                     Color px = currentImage.GetPixel(x, y);
 
                     result.SetPixel(x, currentImage.Height - 1 - y, px);
+                }
+            }
+
+            currentImage = result;
+            pictureBoxImage.Image = currentImage;
+        }
+
+        // =========================
+        // GREEN FILTER (BRANCH B)
+        // =========================
+        private void buttonGreen_Click(object? sender, EventArgs e)
+        {
+            if (currentImage == null) return;
+
+            Bitmap result = new Bitmap(currentImage);
+
+            for (int y = 0; y < result.Height; y++)
+            {
+                for (int x = 0; x < result.Width; x++)
+                {
+                    Color px = result.GetPixel(x, y);
+
+                    result.SetPixel(x, y, Color.FromArgb(
+                        px.A,
+                        0,
+                        px.G,
+                        0
+                    ));
                 }
             }
 

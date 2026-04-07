@@ -17,124 +17,127 @@
 
         private void InitializeComponent()
         {
-            buttonLoad = new Button();
-            pictureBoxImage = new PictureBox();
-            radio90 = new RadioButton();
-            radio180 = new RadioButton();
-            radio270 = new RadioButton();
-            buttonRotate = new Button();
-            buttonInvert = new Button();
-            buttonFlip = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxImage).BeginInit();
-            SuspendLayout();
-            // 
+            this.buttonLoad = new System.Windows.Forms.Button();
+            this.pictureBoxImage = new System.Windows.Forms.PictureBox();
+            this.radio90 = new System.Windows.Forms.RadioButton();
+            this.radio180 = new System.Windows.Forms.RadioButton();
+            this.radio270 = new System.Windows.Forms.RadioButton();
+            this.buttonRotate = new System.Windows.Forms.Button();
+            this.buttonInvert = new System.Windows.Forms.Button();
+            this.buttonFlip = new System.Windows.Forms.Button();
+            this.buttonGreen = new System.Windows.Forms.Button();
+
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
+            this.SuspendLayout();
+
             // buttonLoad
-            // 
-            buttonLoad.Location = new Point(12, 333);
-            buttonLoad.Name = "buttonLoad";
-            buttonLoad.Size = new Size(94, 29);
-            buttonLoad.TabIndex = 0;
-            buttonLoad.Text = "Load";
-            buttonLoad.UseVisualStyleBackColor = true;
-            // 
+            this.buttonLoad.Location = new System.Drawing.Point(12, 333);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(94, 29);
+            this.buttonLoad.TabIndex = 0;
+            this.buttonLoad.Text = "Load";
+            this.buttonLoad.UseVisualStyleBackColor = true;
+
             // pictureBoxImage
-            // 
-            pictureBoxImage.Location = new Point(112, 12);
-            pictureBoxImage.Name = "pictureBoxImage";
-            pictureBoxImage.Size = new Size(259, 350);
-            pictureBoxImage.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxImage.TabIndex = 1;
-            pictureBoxImage.TabStop = false;
-            // 
+            this.pictureBoxImage.Location = new System.Drawing.Point(112, 12);
+            this.pictureBoxImage.Name = "pictureBoxImage";
+            this.pictureBoxImage.Size = new System.Drawing.Size(259, 350);
+            this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxImage.TabIndex = 1;
+            this.pictureBoxImage.TabStop = false;
+
             // radio90
-            // 
-            radio90.AutoSize = true;
-            radio90.Location = new Point(12, 12);
-            radio90.Name = "radio90";
-            radio90.Size = new Size(46, 24);
-            radio90.TabIndex = 2;
-            radio90.TabStop = true;
-            radio90.Text = "90";
-            radio90.UseVisualStyleBackColor = true;
-            // 
+            this.radio90.AutoSize = true;
+            this.radio90.Location = new System.Drawing.Point(12, 12);
+            this.radio90.Name = "radio90";
+            this.radio90.Size = new System.Drawing.Size(46, 24);
+            this.radio90.TabIndex = 2;
+            this.radio90.TabStop = true;
+            this.radio90.Text = "90";
+            this.radio90.UseVisualStyleBackColor = true;
+
             // radio180
-            // 
-            radio180.AutoSize = true;
-            radio180.Location = new Point(12, 42);
-            radio180.Name = "radio180";
-            radio180.Size = new Size(54, 24);
-            radio180.TabIndex = 3;
-            radio180.TabStop = true;
-            radio180.Text = "180";
-            radio180.UseVisualStyleBackColor = true;
-            // 
+            this.radio180.AutoSize = true;
+            this.radio180.Location = new System.Drawing.Point(12, 42);
+            this.radio180.Name = "radio180";
+            this.radio180.Size = new System.Drawing.Size(54, 24);
+            this.radio180.TabIndex = 3;
+            this.radio180.TabStop = true;
+            this.radio180.Text = "180";
+            this.radio180.UseVisualStyleBackColor = true;
+
             // radio270
-            // 
-            radio270.AutoSize = true;
-            radio270.Location = new Point(12, 73);
-            radio270.Name = "radio270";
-            radio270.Size = new Size(54, 24);
-            radio270.TabIndex = 4;
-            radio270.TabStop = true;
-            radio270.Text = "270";
-            radio270.UseVisualStyleBackColor = true;
-            // 
+            this.radio270.AutoSize = true;
+            this.radio270.Location = new System.Drawing.Point(12, 73);
+            this.radio270.Name = "radio270";
+            this.radio270.Size = new System.Drawing.Size(54, 24);
+            this.radio270.TabIndex = 4;
+            this.radio270.TabStop = true;
+            this.radio270.Text = "270";
+            this.radio270.UseVisualStyleBackColor = true;
+
             // buttonRotate
-            // 
-            buttonRotate.Location = new Point(12, 102);
-            buttonRotate.Name = "buttonRotate";
-            buttonRotate.Size = new Size(94, 29);
-            buttonRotate.TabIndex = 5;
-            buttonRotate.Text = "Rotate";
-            buttonRotate.UseVisualStyleBackColor = true;
-            // 
+            this.buttonRotate.Location = new System.Drawing.Point(12, 102);
+            this.buttonRotate.Name = "buttonRotate";
+            this.buttonRotate.Size = new System.Drawing.Size(94, 29);
+            this.buttonRotate.TabIndex = 5;
+            this.buttonRotate.Text = "Rotate";
+            this.buttonRotate.UseVisualStyleBackColor = true;
+
             // buttonInvert
-            // 
-            buttonInvert.Location = new Point(12, 137);
-            buttonInvert.Name = "buttonInvert";
-            buttonInvert.Size = new Size(94, 48);
-            buttonInvert.TabIndex = 6;
-            buttonInvert.Text = "Invert Colors";
-            buttonInvert.UseVisualStyleBackColor = true;
-            // 
+            this.buttonInvert.Location = new System.Drawing.Point(12, 137);
+            this.buttonInvert.Name = "buttonInvert";
+            this.buttonInvert.Size = new System.Drawing.Size(94, 48);
+            this.buttonInvert.TabIndex = 6;
+            this.buttonInvert.Text = "Invert Colors";
+            this.buttonInvert.UseVisualStyleBackColor = true;
+
             // buttonFlip
-            // 
-            buttonFlip.Location = new Point(12, 191);
-            buttonFlip.Name = "buttonFlip";
-            buttonFlip.Size = new Size(94, 49);
-            buttonFlip.TabIndex = 7;
-            buttonFlip.Text = "Upside Down";
-            buttonFlip.UseVisualStyleBackColor = true;
-            // 
+            this.buttonFlip.Location = new System.Drawing.Point(12, 191);
+            this.buttonFlip.Name = "buttonFlip";
+            this.buttonFlip.Size = new System.Drawing.Size(94, 49);
+            this.buttonFlip.TabIndex = 7;
+            this.buttonFlip.Text = "Upside Down";
+            this.buttonFlip.UseVisualStyleBackColor = true;
+
+            // buttonGreen
+            this.buttonGreen.Location = new System.Drawing.Point(12, 246);
+            this.buttonGreen.Name = "buttonGreen";
+            this.buttonGreen.Size = new System.Drawing.Size(94, 29);
+            this.buttonGreen.TabIndex = 8;
+            this.buttonGreen.Text = "Green";
+            this.buttonGreen.UseVisualStyleBackColor = true;
+
             // Form1
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(401, 374);
-            Controls.Add(buttonFlip);
-            Controls.Add(buttonInvert);
-            Controls.Add(buttonRotate);
-            Controls.Add(radio270);
-            Controls.Add(radio180);
-            Controls.Add(radio90);
-            Controls.Add(pictureBoxImage);
-            Controls.Add(buttonLoad);
-            Name = "Form1";
-            Text = "Image App";
-            ((System.ComponentModel.ISupportInitialize)pictureBoxImage).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.ClientSize = new System.Drawing.Size(401, 374);
+            this.Controls.Add(this.buttonGreen);
+            this.Controls.Add(this.buttonFlip);
+            this.Controls.Add(this.buttonInvert);
+            this.Controls.Add(this.buttonRotate);
+            this.Controls.Add(this.radio270);
+            this.Controls.Add(this.radio180);
+            this.Controls.Add(this.radio90);
+            this.Controls.Add(this.pictureBoxImage);
+            this.Controls.Add(this.buttonLoad);
+
+            this.Name = "Form1";
+            this.Text = "Image App";
+
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
         #endregion
 
         private System.Windows.Forms.Button buttonLoad;
         private System.Windows.Forms.PictureBox pictureBoxImage;
-        private RadioButton radio90;
-        private RadioButton radio180;
-        private RadioButton radio270;
-        private Button buttonRotate;
-        private Button buttonInvert;
-        private Button buttonFlip;
+        private System.Windows.Forms.RadioButton radio90;
+        private System.Windows.Forms.RadioButton radio180;
+        private System.Windows.Forms.RadioButton radio270;
+        private System.Windows.Forms.Button buttonRotate;
+        private System.Windows.Forms.Button buttonInvert;
+        private System.Windows.Forms.Button buttonFlip;
+        private System.Windows.Forms.Button buttonGreen;
     }
 }
